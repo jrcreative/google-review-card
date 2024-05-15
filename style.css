@@ -1,0 +1,40 @@
+/* Add styles here */
+
+@media print
+{
+.noprint {display:none;}
+}
+
+#qrcode {
+    max-width: 80%;
+}
+
+.layout1 {
+    width: 3.5in !important;
+    height: 2in !important;
+
+    .credit {
+        font-size: 10px;
+    }
+}
+
+.layout2 {
+    width: 2in !important;
+    height: 3.5in !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .credit {
+        display: none;
+    }
+}
+
+.layout3 {
+    width: 5in !important;
+    height: 7in !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
