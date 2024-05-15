@@ -15,7 +15,11 @@
 
 <body>
   <div class="container m-auto p-4 noprint">
+    <h1 class="text-4xl font-bold dark:text-white">Generate your Review Card</h1>
+  </div>
+  <div class="container m-auto p-4 noprint border border-gray-300 rounded-lg">
     <div class="mb-6">
+      <h2 class="text-2xl font-bold mb-2 text-gray-700">Step 1: Add your content</h2>
       <label for="message" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Add your message</label>
       <input type="text" id="message"
         class="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -43,7 +47,7 @@
         Be sure to test with your phone to make sure it works before sending it out.</p>
         <input type="url" id="link"
           class="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Add your link" value="https://google.com" required />
+          placeholder="Add your link" value="https://volume11.agency/review" required />
     </div>
 
     <div class="mb-6">
@@ -58,22 +62,26 @@
         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         id="submit" onclick="generateQR()">Go!</button>
     </div>
+    </div>
+    <div class="container m-auto p-4 noprint border border-gray-300 rounded-lg mt-6">
+
     <div class="noprint">
+      <h2 class="text-2xl font-bold mb-2 text-gray-700">Step 2: Choose your layout</h2>
       <button
       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-      id="submit" onclick="setLayout1()">Layout 1</button>
+      id="submit" onclick="setLayout1()">Card/Magnet/Sticker - Horizontal</button>
       <button
       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-      id="submit" onclick="setLayout2()">Layout 2</button>
+      id="submit" onclick="setLayout2()">Card/Magnet/Sticker - Vertical</button>
       <button
       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-      id="submit" onclick="setLayout3()">Layout 3</button>
+      id="submit" onclick="setLayout3()">Display Stand</button>
     </div>   
   </div>
   
   <section id="card" class="container m-auto flex flex-wrap review-card border border-gray-300 rounded-lg py-6 px-4 my-6">
     <div class="w-1/2 flex space-between flex-col items-center">
-      <h2 class="text-4xl font-bold dark:text-white text-center" id="displayMessage">
+      <h2 class="text-4xl font-bold text-center" id="displayMessage">
       </h2>
       <img class="p-2 m-auto block" id="displayLogo">
     </div>
@@ -84,6 +92,11 @@
       Create your own Review Card at volume11.com/generator
     </div>
   </section>
+
+  <div class="container m-auto p-4 border border-gray-300 rounded-lg noprint mt-6">
+    <h2 class="text-2xl font-bold mb-2 text-gray-700">Step 3: Print your card</h2>
+    <p>Type cntrl/cmd+P to bring up the print dialog and select the printer you want to use. If you'd like to have cards, magnets or desk stands printed select "Print as PDF" (or similar) and contact our partner to start the printing process.</p>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script defer type="text/javascript" src="/main.js"></script>
