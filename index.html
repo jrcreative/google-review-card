@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Generate your Review Card</title>
+  <link rel="icon" href="/images/v11-icon.svg" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +17,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body>
-  <header class="pb-20 bg-primary text-white border-radius-header noprint">
+<body class="px-4">
+  <header class="-mx-4 pb-20 bg-primary text-white border-radius-header noprint">
     <div class="container mx-auto p-4">
       <img src="/images/v11-logo-primary-white.svg" alt="volume11 logo" class="w-40">
     </div>
@@ -25,12 +26,12 @@
       <h1 class="text-6xl font-bold font-maven text-center p-4 w-3/4 mx-auto"><span class="text-primary">Turn up the volume</span> on your Google Business Profile</h1>
     </div>
   </header>
-  <div class="container m-auto pt-20 p-4 noprint">
-    <h1 class="text-4xl font-bold font-maven">Generate your Review Card</h1>
+  <div class="container m-auto pt-20 noprint">
+    <h1 class="text-4xl font-bold font-maven mb-4">Generate your Review Card</h1>
   </div>
   <div class="container m-auto p-4 noprint border border-gray-300 rounded-lg">
     <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-700">Step 1: Add your content</h2>
+      <h2 class="text-2xl font-maven font-bold mb-2 text-gray-700">Step 1: Add your content</h2>
       <label for="message" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Add your message</label>
       <input type="text" id="message"
         class="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -77,7 +78,7 @@
     <div class="container m-auto p-4 noprint border border-gray-300 rounded-lg mt-6">
 
     <div class="noprint">
-      <h2 class="text-2xl font-bold mb-2 text-gray-700">Step 2: Choose your layout</h2>
+      <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Step 2: Choose your layout</h2>
       <button
       class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
       id="submit" onclick="setLayout1()">Card - Horizontal</button>
@@ -92,7 +93,7 @@
   
   <section id="card" class="container m-auto flex flex-wrap review-card border border-gray-300 rounded-lg py-6 px-4 my-6">
     <div class="w-1/2 flex space-between flex-col items-center">
-      <h2 class="text-4xl font-bold text-center" id="displayMessage">
+      <h2 class="font-maven text-4xl font-bold text-center" id="displayMessage">
       </h2>
       <img class="p-2 m-auto block" id="displayLogo">
     </div>
@@ -105,10 +106,47 @@
   </section>
 
   <div class="container m-auto p-4 border border-gray-300 rounded-lg noprint mt-6">
-    <h2 class="text-2xl font-bold mb-2 text-gray-700">Step 3: Print your card</h2>
+    <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Step 3: Print your card</h2>
     <p>Type cntrl/cmd+P to bring up the print dialog and select the printer you want to use. If you'd like to have cards, magnets or desk stands printed select "Print as PDF" (or similar) and contact our partner to start the printing process.</p>
   </div>
-<footer class="bg-gray-900 text-white mt-6">
+
+  <div class="support container m-auto py-4 rounded-lg noprint mt-6">
+    <h2 class="font-maven text-3xl font-bold mb-4 text-gray-700">Additional Resources</h2>
+    <p>Getting reviews is critical to your Local SEO strategy. The following are a few more resource that will help show up in the place your customers need you most.</p>
+    <div class="flex flex-wrap md:flex-nowrap gap-4">
+      <div class="md:w-1/3 border border-gray-300 rounded-lg">
+        <a href="https://volume11.agency/blog/google-business-profile-optimization/">
+          <img class="w-full rounded-t-lg p-0" src="/images/google-business-profile-optimization.png" alt="highlighting 3 points on Google Business Profile to optimize SEO">
+        </a>
+        <div class="p-4">
+          <a href="https://volume11.agency/blog/google-business-profile-optimization/">
+            <h3 class="text-xl font-bold mb-2 text-gray-700 ">Google Business Profile Optimizations to Rank Higher in Local SEO</h3>
+            <p>As a business owner, it’s crucial to ensure your online presence is finely tuned for local searches, and a key strategy is optimizing your GBP.</p>
+          </a>
+        </div>
+        </h2>
+      </div>
+      <div class="md:w-1/3 border border-gray-300 rounded-lg">
+        <a href="https://volume11.agency/blog/how-to-increase-google-reviews/">
+          <img class="w-full rounded-t-lg p-0" src="/images/five-yellow-stars-on-blue-and-pink-background-9821386-1024x683.jpg" alt="how to increase google reviews">
+        </a>
+        <div class="p-4">
+          <a href="https://volume11.agency/blog/how-to-increase-google-reviews/">
+            <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">How to increase your Google Reviews in 2024</h2>
+            <p>These reviews are not just feedback; they’re powerful tools that shape customer decisions and influence your business’s success. </p>
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/3 border border-gray-300 rounded-lg p-10 bg-primary justify-center text-center">
+        <img src="/images/v11-icon-white.svg" alt="volume11 white icon" class="w-40 m-auto my-10">
+        <h3 class="text-3xl font-bold mb-10 text-white font-maven">It’s time to tune up your Google Business Profile.</h2>
+          <a href="https://volume11.agency/gbp-cheatsheet-download/" class="block text-white font-medium rounded-full text-sm px-5 py-2.5 mt-2 mb-2 button-primary uppercase">
+            Download the free GBP Cheatsheet
+          </a>
+      </div>
+    </div>
+  </div>
+<footer class="bg-gray-900 text-white mt-20 py-10 -mx-4">
   <div class="container m-auto p-4">
     &copy; 2024 <a href="https://volume11.agency">Volume11</a>. All rights reserved.
   </div>

@@ -24,7 +24,19 @@
 }
 
 .border-radius-header {
-    border-radius: 0 0 300px 0;
+    border-radius: 0 0 75px 0;
+}
+
+@media (min-width: 768px) {
+    .border-radius-header {
+        border-radius: 0 0 150px 0;
+    }
+}
+
+@media (min-width: 1320px) {
+    .border-radius-header {
+        border-radius: 0 0 300px 0;
+    }
 }
 
 .button-primary {
