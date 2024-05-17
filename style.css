@@ -1,12 +1,53 @@
 /* Add styles here */
 
-@media print
-{
-.noprint {display:none;}
+:root {
+    --primary: #d01d89;
+    --primary-dark: #a30a64;
+}
+
+@layer base {
+    html {
+        font-family: "Maven Pro", system-ui, sans-serif;
+    }
+}
+
+.font-maven {
+    font-family: "Maven Pro", system-ui, sans-serif;
+}
+
+.bg-primary {
+    background: var(--primary-dark);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.border-radius-header {
+    border-radius: 0 0 300px 0;
+}
+
+.button-primary {
+    background-color: var(--primary);
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+        background-color: var(--primary-dark);
+    }
+}
+
+@media print {
+    .noprint {
+        display: none;
+    }
 }
 
 #qrcode {
     max-width: 80%;
+}
+
+#card {
+    transition: all 250ms ease-in-out;
 }
 
 .layout1 {

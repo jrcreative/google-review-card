@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Generate your Review Card</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
   <link href='/style.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
@@ -14,8 +17,16 @@
 </head>
 
 <body>
-  <div class="container m-auto p-4 noprint">
-    <h1 class="text-4xl font-bold dark:text-white">Generate your Review Card</h1>
+  <header class="pb-20 bg-primary text-white border-radius-header noprint">
+    <div class="container mx-auto p-4">
+      <img src="/images/v11-logo-primary-white.svg" alt="volume11 logo" class="w-40">
+    </div>
+    <div class="container m-auto pt-20 p-4">
+      <h1 class="text-6xl font-bold font-maven text-center p-4 w-3/4 mx-auto"><span class="text-primary">Turn up the volume</span> on your Google Business Profile</h1>
+    </div>
+  </header>
+  <div class="container m-auto pt-20 p-4 noprint">
+    <h1 class="text-4xl font-bold font-maven">Generate your Review Card</h1>
   </div>
   <div class="container m-auto p-4 noprint border border-gray-300 rounded-lg">
     <div class="mb-6">
@@ -59,7 +70,7 @@
 
     <div class="noprint">
       <button
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        class="text-white  focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none button-primary"
         id="submit" onclick="generateQR()">Go!</button>
     </div>
     </div>
@@ -68,13 +79,13 @@
     <div class="noprint">
       <h2 class="text-2xl font-bold mb-2 text-gray-700">Step 2: Choose your layout</h2>
       <button
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-      id="submit" onclick="setLayout1()">Card/Magnet/Sticker - Horizontal</button>
+      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
+      id="submit" onclick="setLayout1()">Card - Horizontal</button>
       <button
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-      id="submit" onclick="setLayout2()">Card/Magnet/Sticker - Vertical</button>
+      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
+      id="submit" onclick="setLayout2()">Card - Vertical</button>
       <button
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
       id="submit" onclick="setLayout3()">Display Stand</button>
     </div>   
   </div>
@@ -97,7 +108,11 @@
     <h2 class="text-2xl font-bold mb-2 text-gray-700">Step 3: Print your card</h2>
     <p>Type cntrl/cmd+P to bring up the print dialog and select the printer you want to use. If you'd like to have cards, magnets or desk stands printed select "Print as PDF" (or similar) and contact our partner to start the printing process.</p>
   </div>
-
+<footer class="bg-gray-900 text-white mt-6">
+  <div class="container m-auto p-4">
+    &copy; 2024 <a href="https://volume11.agency">Volume11</a>. All rights reserved.
+  </div>
+</footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
