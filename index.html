@@ -79,15 +79,38 @@
 
     <div class="noprint">
       <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Step 2: Choose your layout</h2>
-      <button
-      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
-      id="submit" onclick="setLayout1()">Card - Horizontal</button>
-      <button
-      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
-      id="submit" onclick="setLayout2()">Card - Vertical</button>
-      <button
-      class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
-      id="submit" onclick="setLayout3()">Display Stand</button>
+      <div class="flex flex-col gap-4">
+        <div class="flex gap-4">
+          <img class="w-40 rounded-lg" src="/images/Review-Card-Horizontal.jpg" alt="mockup of a business card with QR code, logo and invitation to review on Google">
+          <div>
+            <h2 class="font-maven text-2xl font-bold text-gray-700 mb-2">3 1/2in x 2in - Horizontal Layout</h2>
+            <p class="mb-2">Great for business cards, stickers or magnets. Leave them behind with clients, or provide each technician or service person with one and have them ask customers to scan at the time that they're most satisfied with your service or product.</p>
+            <button
+            class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
+            id="submit" onclick="setLayout1()">Select Card - Horizontal</button>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img class="w-40 rounded-lg" src="/images/Review-Card-Vertical.jpg" alt="mockup of a business card with QR code, logo and invitation to review on Google.">
+          <div>
+            <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">2in x 3 1/2in - Vertical Layout</h2>
+            <p class="mb-2">Great for vertical business cards, stickers and lanyards. Lanyards can be worn by technicians and service workers who can request reviews at time of completion or payment when the customer is most satisfied.</p>
+            <button
+            class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
+            id="submit" onclick="setLayout2()">Select Card - Vertical</button>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img class="w-40 rounded-lg" src="/images/table-stand-mockup.jpg" alt="mockup of table top display stand with QR code, logo and invitation to review on Google.">
+          <div>
+            <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">5in x 7in - Table Top Stand</h2>
+            <p class="mb-2">Great for restaurants, bars, and retail locations where people remain and have the time to scan and leave their review.</p>
+            <button
+            class="text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 button-primary"
+            id="submit" onclick="setLayout3()">Select Display Stand</button>
+          </div>
+        </div>
+      </div>
     </div>   
   </div>
   
@@ -111,9 +134,9 @@
   </div>
 
   <div class="support container m-auto py-4 rounded-lg noprint mt-6">
-    <h2 class="font-maven text-3xl font-bold mb-4 text-gray-700">Additional Resources</h2>
+    <h2 class="font-maven text-3xl font-bold text-gray-700">Additional Resources</h2>
     <p>Getting reviews is critical to your Local SEO strategy. The following are a few more resource that will help show up in the place your customers need you most.</p>
-    <div class="flex flex-wrap md:flex-nowrap gap-4">
+    <div class="flex flex-wrap md:flex-nowrap gap-4 mt-4">
       <div class="md:w-1/3 border border-gray-300 rounded-lg">
         <a href="https://volume11.agency/blog/google-business-profile-optimization/">
           <img class="w-full rounded-t-lg p-0" src="/images/google-business-profile-optimization.png" alt="highlighting 3 points on Google Business Profile to optimize SEO">
