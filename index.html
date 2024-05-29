@@ -30,9 +30,21 @@
           volume</span> on your Google Business Profile</h1>
     </div>
   </header>
-  <div x-data="cardGenerator()" class="container mx-auto p-6 bg-white rounded-lg shadow-md flex mt-20">
+  <div class="container m-auto p-10 noprint mt-10 bg-white rounded-lg shadow-md">
+    <h2 class="font-maven text-4xl font-bold mb-2 text-gray-700">How important are reviews?</h2>
+    <p>
+      Reviews in the Google Business Profile are crucial as they provide potential customers with valuable insights into
+      a business's reputation and the quality of its products or services.
+      Positive reviews can significantly boost a business's credibility and trustworthiness, leading to increased
+      customer confidence and ultimately driving more sales.
+      Reviews also play a vital role in local SEO, as Google often uses them as a ranking factor when determining the
+      visibility of a business in local search results.
+    </p>
+
+  </div>
+  <div x-data="cardGenerator()" class="container mx-auto p-6 bg-white rounded-lg shadow-md flex mt-6">
     <!-- Input Fields Section -->
-    <div class="w-1/2 p-4">
+    <div class="w-1/2 p-4 noprint">
       <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Generate your Review Card</h2>
       <div class="mb-4">
         <label class="block mb-1">Add your request</label>
@@ -48,13 +60,14 @@
       </div>
       <div class="mb-4">
         <label class="block mb-1">Email Address</label>
-        <input type="email" required x-model="contactEmail" placeholder="contact@example.com" class="w-full p-2 border rounded">
+        <input type="email" required x-model="contactEmail" placeholder="contact@example.com"
+          class="w-full p-2 border rounded">
       </div>
       <div class="mb-4">
         <label class="block mb-1">Upload Logo</label>
         <input type="file" @change="handleLogoUpload" class="w-full border rounded">
-    </div>
-    <div class="mb-4">
+      </div>
+      <div class="mb-4">
         <label>Google Review Link</label>
         <small class="mb-2 block">Find your google review link in the Google Business Profile</small>
         <input type="url" x-model="reviewLink" placeholder="https://goo.gl/reviewlink"
@@ -63,35 +76,41 @@
       <div class="mb-4">
         <label class="block mb-1">Select Layout</label>
         <select x-model="layout" class="w-full p-2 border rounded">
-          <option value="businessCard">Business Card</option>
-          <option value="verticalCard">Vertical Business Card</option>
-          <option value="tableTopStand">Acrylic Table Top Stand</option>
+          <option value="businessCard">Horizontal Card</option>
+          <option value="verticalCard">Vertical Card</option>
+          <option value="tableTopStand">Table Top Stand</option>
         </select>
       </div>
       <div class="mb-4">
         <label class="block mb-1">
-          <input type="checkbox" x-model="consent" class="mr-2"> I agree to the <a href="https://volume11.agency/privacy-policy/" target="_blank"
-            class="hover:underline text-primary">privacy policy</a>.
+          <input type="checkbox" x-model="consent" class="mr-2"> I agree to the <a
+            href="https://volume11.agency/privacy-policy/" target="_blank" class="hover:underline text-primary">privacy
+            policy</a>.
         </label>
       </div>
       <div class="mt-6">
-        <button @click="submitForm" class="text-white font-medium rounded-lg text-sm px-5 py-2.5 my-2 button-primary">Generate Card</button>
+        <button @click="submitForm" class="font-medium rounded-full text-sm px-5 py-2.5 my-2 button-primary">Generate
+          Card</button>
       </div>
     </div>
 
     <!-- Card Display Section -->
     <div class="w-1/2 p-4 flex items-center justify-center">
-      <div x-show="showCard" :class="cardClass" class="border rounded shadow-lg flex items-center justify-center">
-        <div class="p-4">
-          <h2 x-text="prompt"></h2>
-          <p x-text="cta"></p>
-          <div class="mt-4">
-            <img x-show="qrCode" :src="qrCode" alt="QR Code" class="mx-auto">
+      <div x-show="showCard" :class="cardClass" class="border p-4 rounded shadow-lg">
+        <div class="flex">
+          <div class="col-1">
+            <h2 class="displayPrompt" x-text="prompt"></h2>
           </div>
-          <template x-if="logo">
-            <img :src="logo" alt="Company Logo" class="mx-auto mb-4 max-h-16">
-          </template>
+          <div class="col-2">
+            <p class="displayCta" x-text="cta"></p>
+            <div class="mt-2">
+              <img src="/images/qr-code-styling.png" :src="qrCode" alt="QR Code" class="mx-auto displayQrcode">
+            </div>
+          </div>
         </div>
+          <template x-if="logo">
+            <img :src="logo" alt="Company Logo" class="displayLogo">
+          </template>
       </div>
     </div>
   </div>
@@ -102,13 +121,13 @@
         prompt: 'We\'d love your feedback',
         cta: 'Review us on Google',
         companyName: '',
-        contactEmail: '',
+        contactEmail: 'jeremy@volume11.agency',
         reviewLink: 'https://goo.gl/reviewlink',
         layout: 'businessCard',
         showCard: true,
         consent: false,
-        logo: null,
-        qrCode: '',
+        logo: '/images/placeholder-logo.svg',
+        qrCode: '/images/qr-code-styling.png',
         get cardClass() {
           switch (this.layout) {
             case 'businessCard':
@@ -122,15 +141,15 @@
           }
         },
         handleLogoUpload(event) {
-                    const file = event.target.files[0];
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = (e) => {
-                            this.logo = e.target.result;
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                },
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              this.logo = e.target.result;
+            };
+            reader.readAsDataURL(file);
+          }
+        },
         generateQR() {
           // Simulating QR Code generation for simplicity. Replace this with actual QR code generation logic.
           this.qrCode = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(this.reviewLink)}`;
@@ -189,15 +208,41 @@
     }
   </script>
 
+<div class="container m-auto py-10 noprint mt-10">
+  <div class="flex gap-4">
+    <div class="w-1/4">
+      <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">2 x 3.5" Card - Horizontal</h3>
+      <img class="block h-auto rounded-lg" src="/images/Review-Card-Horizontal.jpg" alt="Business Card - Horizontal">
+      <p>In addition to business cards, this layout works great for magnets and stickers.</p>
+    </div>
+    <div class="w-1/4">
+      <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">2 x 3.5" Card - Vertical</h3>
+      <img class="block h-auto rounded-lg" src="/images/Review-Card-Vertical.jpg" alt="Business Card - Vertical">
+      <p>In addition to business cards, this layout works great for lanyards.</p>
+    </div>
+    <div class="w-1/4">
+      <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">Table Top Stand</h3>
+      <img class="block h-auto rounded-lg" src="images/tabel-top-stand.jpg" alt="Table top stand">
+      <p>This is a great option for retail or restaurants.</p>
+    </div>
+    <div class="w-1/4">
+      <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">Lanyard Mockup</h3>
+      <img class="block h-auto rounded-lg" src="images/lanyard-mockup.jpg" alt="Lanyard Mockup">
+      <p>This lanyard design uses the vertical layout. You can work with your printer to design the front.</p>
+    </div>
+  </div>
+</div>
+
   <div class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-6 no-print">
     <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Print your card</h2>
-    <p>Type <code>ctrl/&#8984;+P</code> to bring up the print dialog and select the printer you want to use. If you'd like to have
+    <p>Type <code>ctrl/&#8984;+P</code> to bring up the print dialog and select the printer you want to use. If you'd
+      like to have
       cards, magnets or desk stands printed select "Print as PDF" (or similar) and contact our partner to start the
       printing process.</p>
-    <button class="text-white font-medium rounded-lg text-sm px-5 py-2.5 my-2 button-primary"
+    <button class="font-medium rounded-full text-sm px-5 py-2.5 my-2 button-primary"
       onclick="window.print()">Print</button>
   </div>
-
+ 
   <div class="bg-gray-200 -mx-4 py-6 px-4 mt-10">
     <div class="support container m-auto py-4 rounded-lg noprint mt-6">
       <h2 class="font-maven text-3xl font-bold text-gray-700">Additional Resources</h2>
@@ -245,7 +290,7 @@
           <h3 class="text-2xl font-bold mb-10 text-white font-maven">It’s time to tune up your Google Business Profile.
             </h2>
             <a href="https://volume11.agency/gbp-cheatsheet-download/"
-              class="block text-white font-medium rounded-full text-sm px-5 py-2.5 mt-2 mb-2 button-primary uppercase">
+              class="block font-medium rounded-full text-sm px-5 py-2.5 mt-2 mb-2 button-primary uppercase">
               Download the free GBP Cheatsheet
             </a>
         </div>
