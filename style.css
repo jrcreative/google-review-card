@@ -67,6 +67,15 @@ button.layout-selector.active {
     .noprint {
         display: none;
     }
+
+    .container {
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .shadow-lg {
+        box-shadow: none !important;
+    }
 }
 
 #card {
@@ -209,5 +218,13 @@ button.layout-selector.active {
         max-width: 95%;
         max-height: 50px;
         margin: 0.5rem auto;
+    }
+}
+
+@media print {
+    .layout3 {
+        min-width: 5in !important;
+        width: 5in !important;
+        height: 7in !important;
     }
 }
