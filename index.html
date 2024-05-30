@@ -57,15 +57,6 @@
           <input type="text" x-model="cta" placeholder="Review us on Google" class="w-full p-2 border rounded">
         </div>
         <div class="mb-4">
-          <label class="block mb-1">Company Name</label>
-          <input type="text" x-model="companyName" placeholder="Your Company Name" class="w-full p-2 border rounded">
-        </div>
-        <div class="mb-4">
-          <label class="block mb-1">Email Address</label>
-          <input type="email" required x-model="contactEmail" placeholder="contact@example.com"
-            class="w-full p-2 border rounded">
-        </div>
-        <div class="mb-4">
           <label class="block mb-1">Upload Logo</label>
           <input type="file" @change="handleLogoUpload" class="w-full border rounded">
         </div>
@@ -107,10 +98,19 @@
         </div>
 
         <div class="mb-4">
+          <label class="block mb-1">Company Name</label>
+          <input type="text" x-model="companyName" placeholder="Your Company Name" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1">Email Address</label>
+          <input type="email" required x-model="contactEmail" placeholder="contact@example.com"
+            class="w-full p-2 border rounded">
+        </div>
+
+        <div class="mb-4">
           <label class="block mb-1">
             <input type="checkbox" x-model="consent" class="mr-2"> I agree to the <a
-              href="https://volume11.agency/privacy-policy/" target="_blank"
-              class="hover:underline text-primary">privacy
+              href="https://volume11.agency/privacy-policy/" target="_blank" class="link">privacy
               policy</a>.
           </label>
         </div>
@@ -137,15 +137,31 @@
       </div>
 
     </div>
+
     <div class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-6 noprint">
       <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Print your card</h2>
       <p>In order to print cards, magnets, or desk stands select "Print as PDF" and email the resulting file to your
-        printer, or connect with our partner, <a class="text-primary hover:text-primary-dark"
-          href="https://instantimprints.com/centers/vancouverwa/">Instant Imprints</a>.</p>
+        printer, or connect with our friends at <a class="link" href="https://instantimprints.com/centers/vancouverwa/"
+          target="_blank">Instant Imprints</a>.</p>
       <div class="mt-6">
         <button @click="submitForm"
           class="font-medium rounded-full text-sm px-5 py-2.5 my-2 button-primary">Print</button>
       </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto py-12 px-6 bg-gray-900 rounded-lg shadow-md mt-6 noprint flex items-center">
+    <div class="w-2/3">
+      <h2 class="font-maven text-primary text-4xl font-bold mb-2">Need Help?</h2>
+      <p class="text-white text-lg">If you need help with this tool, customizing the design to meet your needs, or
+        improving your Google Business Profile ranking in some other way <a class="link"
+          href="https://volume11.agency/contact">reach out and let's get something on the calendar</a>.</p>
+    </div>
+    <div class="w-1/3 flex justify-center">
+      <a href="https://volume11.agency/contact"
+        class="font-medium rounded-full text-sm px-5 py-2.5 mt-2 mb-2 button-primary uppercase">
+        Schedule a call
+      </a>
     </div>
   </div>
 
@@ -258,7 +274,7 @@
     }
   </script>
 
-  <div class="bg-gray-200 -mx-4 py-6 px-4 mt-10">
+  <div class="bg-gray-200 p-4 mt-10 -mx-4">
     <div class="support container m-auto py-4 rounded-lg noprint mt-6">
       <h2 class="font-maven text-3xl font-bold text-gray-700">Additional Resources</h2>
       <p>Getting reviews is critical to your Local SEO strategy. The following are a few more resource that will help
