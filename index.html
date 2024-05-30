@@ -82,6 +82,31 @@
         </select>
       </div>
       <div class="mb-4">
+        <div class="flex gap-4">
+          <div class="w-1/4">
+            <!-- <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">2 x 3.5" Card - Horizontal</h3> -->
+              <img data-modal-target="card-horizontal" data-modal-toggle="card-horizontal" class="block h-auto rounded-lg" src="/images/Review-Card-Horizontal.jpg" alt="Business Card - Horizontal">
+            <!-- <p>In addition to business cards, this layout works great for magnets and stickers.</p> -->
+          </div>
+          <div class="w-1/4">
+            <!-- <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">2 x 3.5" Card - Vertical</h3> -->
+            <img class="block h-auto rounded-lg" src="/images/Review-Card-Vertical.jpg" alt="Business Card - Vertical">
+            <!-- <p>In addition to business cards, this layout works great for lanyards.</p> -->
+          </div>
+          <div class="w-1/4">
+            <!-- <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">Table Top Stand</h3> -->
+            <img class="block h-auto rounded-lg" src="images/tabel-top-stand.jpg" alt="Table top stand">
+            <!-- <p>This is a great option for retail or restaurants.</p> -->
+          </div>
+          <div class="w-1/4">
+            <!-- <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">Lanyard Mockup</h3> -->
+            <img class="block h-auto rounded-lg" src="images/lanyard-mockup.jpg" alt="Lanyard Mockup">
+            <!-- <p>This lanyard design uses the vertical layout. You can work with your printer to design the front.</p> -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-4">
         <label class="block mb-1">
           <input type="checkbox" x-model="consent" class="mr-2"> I agree to the <a
             href="https://volume11.agency/privacy-policy/" target="_blank" class="hover:underline text-primary">privacy
@@ -208,7 +233,7 @@
     }
   </script>
 
-<div class="container m-auto py-10 noprint mt-10">
+<!-- <div class="container m-auto py-10 noprint mt-10">
   <div class="flex gap-4">
     <div class="w-1/4">
       <h3 class="font-maven text-xl font-bold mb-2 text-gray-700">2 x 3.5" Card - Horizontal</h3>
@@ -231,7 +256,7 @@
       <p>This lanyard design uses the vertical layout. You can work with your printer to design the front.</p>
     </div>
   </div>
-</div>
+</div> -->
 
   <div class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-6 no-print">
     <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Print your card</h2>
@@ -295,6 +320,31 @@
             </a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Main modal -->
+  <div id="card-horizontal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    2" x 3.5" Card - Horizontal
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4">
+              <img src="/images/Review-Card-Horizontal.jpg" alt="mockup of horizontal card" class="mx-auto">
+            </div>
+        </div>
     </div>
   </div>
 
