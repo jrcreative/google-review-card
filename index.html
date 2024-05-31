@@ -44,9 +44,9 @@
 
   </div>
   <div x-data="cardGenerator()">
-    <div class="container mx-auto p-6 bg-white rounded-lg shadow-md flex mt-6">
+    <div class="container mx-auto p-6 bg-white rounded-lg shadow-md flex flex-wrap md:flex-norwrap mt-6">
       <!-- Input Fields Section -->
-      <div class="w-1/2 p-4 noprint">
+      <div class="md:w-1/2 p-4 noprint">
         <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Generate your Review Card</h2>
         <div class="mb-4">
           <label class="block mb-1">Add your request</label>
@@ -117,8 +117,8 @@
       </div>
 
       <!-- Card Display Section -->
-      <div class="w-1/2 p-4 flex items-center justify-center">
-        <div x-show="showCard" :class="cardClass" class="border p-4 rounded shadow-lg">
+      <div class="md:w-1/2 p-4 flex justify-center">
+        <div x-show="showCard" :class="cardClass" class="border p-4 rounded shadow-lg sticky top-10">
           <div class="flex">
             <div class="col-1">
               <h2 class="displayPrompt" x-text="prompt"></h2>
