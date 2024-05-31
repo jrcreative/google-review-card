@@ -58,12 +58,12 @@
         </div>
         <div class="mb-4">
           <label class="block mb-1">Upload Logo</label>
-          <input type="file" @change="handleLogoUpload" class="w-full border rounded">
+          <input required type="file" @change="handleLogoUpload" class="w-full border rounded">
         </div>
         <div class="mb-4">
           <label>Google Review Link</label>
           <small class="mb-2 block">Find your google review link in the Google Business Profile</small>
-          <input type="url" x-model="reviewLink" @change="generateQR" placeholder="https://goo.gl/reviewlink"
+          <input required type="url" x-model="reviewLink" @change="generateQR" placeholder="https://goo.gl/reviewlink"
             class="w-full p-2 border rounded">
         </div>
         <div class="mb-4">
@@ -99,7 +99,7 @@
 
         <div class="mb-4">
           <label class="block mb-1">Company Name</label>
-          <input type="text" x-model="companyName" placeholder="Your Company Name" class="w-full p-2 border rounded">
+          <input required type="text" x-model="companyName" placeholder="Your Company Name" class="w-full p-2 border rounded">
         </div>
         <div class="mb-4">
           <label class="block mb-1">Email Address</label>
@@ -139,7 +139,7 @@
     </div>
 
     <div class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-6 noprint">
-      <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Print your card</h2>
+      <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700 noprint">Print your card</h2>
       <p>In order to print cards, magnets, or desk stands select "Print as PDF" and email the resulting file to your
         printer, or connect with our friends at <a class="link" href="https://instantimprints.com/centers/vancouverwa/"
           target="_blank">Instant Imprints</a>.</p>
@@ -150,7 +150,7 @@
     </div>
   </div>
 
-  <div class="container mx-auto py-12 px-6 bg-gray-900 rounded-lg shadow-md mt-6 noprint flex items-center">
+  <div class="container mx-auto py-12 px-6 bg-gray-900 rounded-lg shadow-md mt-6 noprint flex items-center noprint">
     <div class="w-2/3">
       <h2 class="font-maven text-primary text-4xl font-bold mb-2">Need Help?</h2>
       <p class="text-white text-lg">If you need help with this tool, customizing the design to meet your needs, or
@@ -224,7 +224,7 @@
         },
         async submitForm() {
           if (!this.consent) {
-            alert('Please consent to the collection of this information.');
+            alert('Please agree to our privacy policy.');
             return;
           }
 

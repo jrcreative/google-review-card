@@ -251,6 +251,18 @@ button.layout-selector.active {
 }
 
 @media print {
+    .layout1 {
+        min-width: 3.5in !important;
+        width: 3.5in !important;
+        height: 2in !important;
+    }
+    
+    .layout2 {
+        min-width: 2in !important;
+        width: 2in !important;
+        height: 3.5in !important;
+    }
+
     .layout3 {
         min-width: 5in !important;
         width: 5in !important;
