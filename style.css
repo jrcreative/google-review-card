@@ -94,7 +94,7 @@ button.layout-selector.active {
 
 @media print {
     .noprint {
-        display: none;
+        display: none !important;
     }
 
     .container {

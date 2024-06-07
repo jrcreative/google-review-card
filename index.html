@@ -27,21 +27,49 @@
       </a>
     </div>
     <div class="container m-auto pt-20 p-4">
-      <h1 class="text-6xl font-bold font-maven text-center p-4 w-3/4 mx-auto"><span class="text-primary">Turn up the
-          volume</span> on your Google Business Profile with more reviews.</h1>
+      <h1 class="text-6xl font-bold font-maven text-center p-4 w-3/4 mx-auto text-primary">Create your review card</h1>
+      <h2 class="text-2xl font-bold font-maven text-center w-3/4 mx-auto">Try our free review card generator to easily create cards, stickers, or table stands that help gather reviews at the peak of customer satisfaction.</h2>
     </div>
   </header>
-  <div class="container m-auto p-10 noprint mt-10 bg-white rounded-lg shadow-md">
-    <h2 class="font-maven text-4xl font-bold mb-2 text-gray-700">Simplify getting more reviews</h2>
-    <p>
-      Getting reviews can be challenging, and many businesses struggle to encourage customers to leave feedback. This tool aims to simplify the process by providing you with a customizable review card that you can use to request reviews from your customers easily. Simply fill in the required information, customize the design to match your brand, and print the card to start collecting reviews.
-    </p>
+  <div class="container m-auto p-10 noprint mt-10 bg-white rounded-lg shadow-md flex gap-8 items-center noprint">
+    <div class="w-2/3">
+      <h2 class="font-maven text-4xl font-bold mb-2 text-gray-900">Simplify getting more reviews</h2>
+      <p class="mb-4">
+        Getting reviews can be challenging, and many businesses struggle to encourage customers to leave feedback. This tool aims to simplify the process by providing you with a customizable review card that you can use to request reviews from your customers easily. Simply fill in the required information, customize the design to match your brand, and print the card to start collecting reviews.
+      </p>
+      <h3 class="font-maven text-2xl font-bold mb-2 text-gray-900">Create your review cards in 3 steps</h3>
+      <ol class="list-decimal pl-5">
+        <li>Fill in the required information</li>
+        <li>Select the layout that works for you</li>
+        <li>Print the card to start collecting reviews</li>
+      </ol>
+    </div>
+    <div class="w-1/3 flex grid grid-cols-2 gap-8">
+      <div class="">
+        <img data-modal-target="card-horizontal" data-modal-toggle="card-horizontal"
+          class="block h-auto rounded-lg cursor-pointer" src="images/Review-Card-Horizontal.jpg"
+          alt="Business Card - Horizontal">
+      </div>
+      <div class="">
+        <img data-modal-target="card-vertical" data-modal-toggle="card-vertical"
+          class="block h-auto rounded-lg cursor-pointer" src="images/Review-Card-Vertical.jpg"
+          alt="Business Card - Vertical">
+      </div>
+      <div class="">
+        <img data-modal-target="table-top-stand" data-modal-toggle="table-top-stand"
+          class="block h-auto rounded-lg cursor-pointer" src="images/table-top-stand.jpg" alt="Table top stand">
+      </div>
+      <div class="">
+        <img data-modal-target="lanyard" data-modal-toggle="lanyard"
+          class="block h-auto rounded-lg cursor-pointer" src="images/lanyard-mockup.jpg" alt="Lanyard">
+      </div>
+    </div>
   </div>
   <div x-data="cardGenerator()">
     <div class="container mx-auto p-6 bg-white rounded-lg shadow-md flex flex-wrap md:flex-norwrap mt-6">
       <!-- Input Fields Section -->
       <div class="md:w-1/2 p-4 noprint">
-        <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Generate your Review Card</h2>
+        <h2 class="font-maven text-2xl font-bold mb-2 text-gray-900">Generate your Review Card</h2>
         <div class="mb-4">
           <label class="block mb-1">Add your request</label>
           <input type="text" x-model="prompt" placeholder="We'd love your feedback" class="w-full p-2 border rounded">
@@ -90,24 +118,6 @@
             </div>
           </div>
         </div>
-
-        <div class="mb-4">
-          <label class="block mb-1">Company Name</label>
-          <input required type="text" x-model="companyName" placeholder="Your Company Name" class="w-full p-2 border rounded">
-        </div>
-        <div class="mb-4">
-          <label class="block mb-1">Email Address</label>
-          <input type="email" required x-model="contactEmail" placeholder="contact@example.com"
-            class="w-full p-2 border rounded">
-        </div>
-
-        <div class="mb-4">
-          <label class="block mb-1">
-            <input type="checkbox" x-model="consent" class="mr-2"> I agree to the <a
-              href="https://volume11.agency/privacy-policy/" target="_blank" class="link">privacy
-              policy</a>.
-          </label>
-        </div>
       </div>
 
       <!-- Card Display Section -->
@@ -133,13 +143,40 @@
     </div>
 
     <div class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-6 noprint">
-      <h2 class="font-maven text-2xl font-bold mb-2 text-gray-700">Print your card</h2>
-      <p>In order to print cards, magnets, or desk stands select "Print as PDF" and email the resulting file to your
-        printer, or connect with our friends at <a class="link" href="https://instantimprints.com/centers/vancouverwa/"
-          target="_blank">Instant Imprints</a>.</p>
+      <div class="mb-4">
+        <h2 class="font-maven text-2xl font-bold mb-2 text-gray-900">Print your card</h2>
+        <p class="mb-2">To professionally print cards, magnets, or desk stands select "Print as PDF" and email the resulting file to your
+          printer, or connect with our friends at <a class="link" href="https://instantimprints.com/centers/vancouverwa/"
+            target="_blank">Instant Imprints</a>.</p>
+            <p>You can print the table stands yourself, and purchase a 5"x7" acrylic stand from your local office supply store or amazon.com.</p>
+      </div>
+
+      <div class="mb-4">
+        <label class="block mb-1">Company Name</label>
+        <input required type="text" x-model="companyName" placeholder="Your Company Name" class="w-full p-2 border rounded">
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1">Email Address</label>
+        <input type="email" required x-model="contactEmail" placeholder="contact@example.com"
+          class="w-full p-2 border rounded">
+      </div>
+
+      <div class="mb-4">
+        <label class="block mb-1">
+          <input type="checkbox" x-model="consent" class="mr-2"> I agree to receive personalised marketing emails. Read our <a
+            href="https://volume11.agency/privacy-policy/" target="_blank" class="link">privacy
+            policy</a>.
+        </label>
+      </div>
+  
       <div class="mt-6">
-        <button @click="submitForm"
-          class="font-medium rounded-full text-sm px-5 py-2.5 my-2 button-primary">Print</button>
+        <button 
+        @click="submitForm" 
+        :disabled="!companyName || !contactEmail || !consent" 
+        :class="{'bg-gray-400 cursor-not-allowed': !companyName || !contactEmail || !consent}" 
+        class="font-medium rounded-full text-sm px-5 py-2.5 my-2 button-primary">
+        Print
+      </button>
       </div>
     </div>
   </div>
@@ -270,7 +307,7 @@
 
   <div class="bg-gray-200 p-4 mt-10 -mx-4">
     <div class="support container max-w-6xl m-auto py-4 rounded-lg noprint mt-6">
-      <h2 class="font-maven text-3xl font-bold text-gray-700">Additional Resources</h2>
+      <h2 class="font-maven text-3xl font-bold text-gray-900">Additional Resources</h2>
       <p>Getting reviews is critical to your Local SEO strategy. The following are a few more resource that will help
         show up in the place your customers need you most.</p>
       <div class="flex flex-wrap md:flex-nowrap gap-10 mt-4">
@@ -282,7 +319,7 @@
           </a>
           <div class="p-4">
             <a href="https://volume11.agency/blog/google-business-profile-optimization/">
-              <h3 class="text-xl font-maven font-bold mb-2 text-gray-700">Google Business Profile Optimizations to Rank
+              <h3 class="text-xl font-maven font-bold mb-2 text-gray-900">Google Business Profile Optimizations to Rank
                 Higher in Local SEO</h3>
               <p>As a business owner, it’s crucial to ensure your online presence is finely tuned for local searches,
                 and a key strategy is optimizing your GBP.</p>
@@ -301,7 +338,7 @@
           </a>
           <div class="p-4">
             <a href="https://volume11.agency/blog/how-to-increase-google-reviews/">
-              <h2 class="font-maven text-xl font-bold mb-2 text-gray-700">How to increase your Google Reviews in 2024
+              <h2 class="font-maven text-xl font-bold mb-2 text-gray-900">How to increase your Google Reviews in 2024
               </h2>
               <p>These reviews are not just feedback; they’re powerful tools that shape customer decisions and influence
                 your business’s success. </p>
