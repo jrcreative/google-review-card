@@ -45,6 +45,10 @@ a.link {
     background: var(--primary-dark);
 }
 
+.bg-dark {
+    background-image: radial-gradient(circle at right bottom, #404040 0%,#222 100%);
+}
+
 .text-primary {
     color: var(--primary);
 }
